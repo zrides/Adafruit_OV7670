@@ -21,7 +21,6 @@
 
 #include "image_ops.h"
 #include "ov7670.h"
-#include <Adafruit_ZeroDMA.h>
 #include <Wire.h>
 
 /** Buffer reallocation behaviors requested of setSize() */
@@ -328,6 +327,7 @@ private:
   OV7670_colorspace space;   ///< RGB or YUV colorspace
   const uint8_t i2c_address; ///< I2C address
   const bool arch_defaults;  ///< If set, ignore arch struct, use defaults
+  camera_t camera_type;      ///< Camera model
 };
 
 // C-ACCESSIBLE FUNCTIONS --------------------------------------------------
